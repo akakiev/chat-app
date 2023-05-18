@@ -12,7 +12,7 @@ class NewMessage extends StatefulWidget {
 }
 
 class _NewMessageState extends State<NewMessage> {
-  var _messageController = TextEditingController();
+  final _messageController = TextEditingController();
 
   @override
   void dispose() {
@@ -21,13 +21,14 @@ class _NewMessageState extends State<NewMessage> {
   }
 
   void _submitMessage() async {
-    FocusScope.of(context).unfocus();
-    _messageController.clear();
     final enteredMessage = _messageController.text;
 
     if (enteredMessage.trim().isEmpty) {
       return;
     }
+
+    FocusScope.of(context).unfocus();
+    _messageController.clear();
 
     final user = FirebaseAuth.instance.currentUser!;
     final userData = await FirebaseFirestore.instance
