@@ -21,13 +21,13 @@ class ChatMessages extends StatelessWidget {
           );
         }
 
-        if (chatSnapshots.hasError) {
+        if (!chatSnapshots.hasData || chatSnapshots.data!.docs.isEmpty) {
           return const Center(
             child: Text('No messages found.'),
           );
         }
 
-        if (!chatSnapshots.hasData || chatSnapshots.data!.docs.isEmpty) {
+        if (chatSnapshots.hasError) {
           return const Center(
             child: Text('Something went wrong...'),
           );
