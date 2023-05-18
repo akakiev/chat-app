@@ -42,6 +42,7 @@ dependencies:
   camera: ^0.10.5
   cloud_firestore: ^4.7.1
   firebase_messaging: ^14.6.1
+  firebase_analytics: ^10.4.1
 
 dev_dependencies:
   flutter_test:
