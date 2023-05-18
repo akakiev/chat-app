@@ -1,6 +1,7 @@
-# chat_app
+# Chat App
 
-A new Flutter project.
+The application, where user can receive chat messages and features the push notifications that are shown whenever the messages are received when the user is currently not using the app.
+In addition this application forces users to create accounts and log in before they can use the application and as the part of a sign up process users also have to take the uploaded image. 
 
 ## Getting Started
 
