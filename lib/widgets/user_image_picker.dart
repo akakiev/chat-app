@@ -11,7 +11,7 @@ class UserImagePicker extends StatefulWidget {
   final void Function(File pickedImage) onPickImage;
 
   @override
-  State<StatefulWidget> createState() {
+  State<UserImagePicker> createState() {
     return _UserImagePickerState();
   }
 }
@@ -47,7 +47,7 @@ class _UserImagePickerState extends State<UserImagePicker> {
               _pickedImageFile != null ? FileImage(_pickedImageFile!) : null,
         ),
         TextButton.icon(
-            onPressed: () {},
+            onPressed: _pickImage,
             icon: const Icon(Icons.image),
             label: Text(
               'Add image',
